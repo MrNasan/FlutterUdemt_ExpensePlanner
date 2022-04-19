@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_complete_guide/widgets/chart.dart';
-import 'package:flutter_complete_guide/widgets/transaction_list.dart';
-import './widgets/new_transaction.dart';
-import './widgets/transaction_list.dart';
+// import 'package:flutter/services.dart';
+
 import './widgets/chart.dart';
+import './widgets/transaction_list.dart';
+import './widgets/new_transaction.dart';
+// import './widgets/transaction_list.dart';
+// import './widgets/chart.dart';
 import './models/transaction.dart';
 
 void main() {
@@ -157,7 +158,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text('Show Chart'),
-                    Switch(
+                    Switch.adaptive(
+                        activeColor: Theme.of(context).accentColor,
                         value: _showChart,
                         onChanged: (val) {
                           setState(() {
